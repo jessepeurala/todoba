@@ -12,6 +12,13 @@
 
 <p style="color: green"><%= flash[:notice] %></p>
 
+<div class="nav">
+    <%= link_to 'Projects', projects_path %>
+    <%= link_to 'Sprints', sprints_path %>
+    <%= link_to 'Tickets', tickets_path%>
+</div>
+
+
 <%= yield  %>
 
 </body>

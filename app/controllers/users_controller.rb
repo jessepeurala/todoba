@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+  skip_before_filter :login_required
 
   # render new.rhtml
   def new
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user.save
     if @user.errors.empty?
       self.current_user = @user
-      redirect_back_or_default('/')
+      redirect_to projects_path
       flash[:notice] = "Thanks for signing up!"
     else
       render :action => 'new'

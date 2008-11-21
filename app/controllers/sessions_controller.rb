@@ -1,5 +1,7 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
+  skip_before_filter :login_required
+  
   # render new.rhtml
   def new
   end
@@ -11,7 +13,7 @@ class SessionsController < ApplicationController
         current_user.remember_me unless current_user.remember_token?
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
-      redirect_back_or_default('/')
+      redirect_to projects_path
       flash[:notice] = "Logged in successfully"
     else
       render :action => 'new'
