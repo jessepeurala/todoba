@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @ticket.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @ticket.description %>
+</p>
+
+<p>
+  <b>Sprint:</b>
+  <%=h @ticket.sprint_id %>
+</p>
+
+<p>
+  <b>Reporter:</b>
+  <%=h @ticket.reporter_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
