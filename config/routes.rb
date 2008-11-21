@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :sprints
+
+  map.resources :projects
+
   map.resources :tickets
 
   # The priority is based upon order of creation: first created -> highest priority.

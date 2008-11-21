@@ -3,6 +3,8 @@ class TicketsController < ApplicationController
   # GET /tickets.xml
   def index
     @tickets = Ticket.find(:all)
+    
+    @ticket = Ticket.new
 
     respond_to do |format|
       format.html # index.html.erb
