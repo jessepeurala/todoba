@@ -3,7 +3,7 @@
 one:
   title: MyString
   description: MyText
-  sprint_id: 1
+  sprint: one
   reporter_id: 1
 
 two:
