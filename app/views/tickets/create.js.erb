@@ -1,0 +1,5 @@
+$("#new_ticket").before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$("#new_ticket")[0].reset();
+
+
+//alert("foo")
