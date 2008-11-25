@@ -44,12 +44,13 @@ class TicketsController < ApplicationController
   def create
     @ticket = Ticket.new(params[:ticket])
   
-    @ticket.reporter = current_user
+    #@ticket.reporter = current_user
       
     respond_to do |format|
       if @ticket.save
         flash[:notice] = 'Ticket was successfully created.'
         format.html { redirect_to(@ticket) }
+        format.js
         format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }
       else
         format.html { render :action => "new" }
