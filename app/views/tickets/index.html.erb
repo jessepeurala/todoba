@@ -1,46 +1,15 @@
-<h1>Listing tickets</h1>
+<h1>Ticket cloud</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Sprint</th>
-    <th>Reporter</th>
-  </tr>
-
+<div class="tickets">
 <% for ticket in @tickets %>
-  <tr>
-    <td><%=h ticket.title %></td>
-    <td><%=h ticket.description %></td>
-    <td><%=h ticket.sprint_id %></td>
-    <td><%=h ticket.reporter_id %></td>
-    <td><%= link_to 'Show', ticket %></td>
-    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-    <td><%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <%= render(:partial => ticket) %>
 <% end %>
-</table>
-
-<h1>New ticket</h1>
+</div>
 
 <% remote_form_for(@ticket) do |f| %>
   <%= f.error_messages %>
-
   <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
     <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :sprint_id %><br />
-    <%= f.text_field :sprint_id %>
-  </p>
-  <p>
-    <%= f.label :reporter_id %><br />
-    <%= f.text_field :reporter_id %>
   </p>
   <p>
     <%= f.submit "Create" %>

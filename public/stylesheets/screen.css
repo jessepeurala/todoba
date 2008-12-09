@@ -1,0 +1,133 @@
+body {
+    font-family: Tahoma, Verdana, Sans-serif;
+    font-size: 90%;
+}
+
+table {
+    border: 1px solid black;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    vertical-align: top;
+    width: 100%;
+}
+
+td {
+    border: 1px solid black;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.header {
+    border: 1px solid;
+    height: 80px;
+}
+
+div.header div.logo {
+    float: left;
+}
+
+/* FIX THIS HACK! */
+div.header div.main_nav {
+    padding: 10px;
+    margin-right: 20%;
+    float: right;
+}
+
+div.header div.main_nav a {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    text-decoration: none;
+}
+
+div.header div.main_nav a:hover {
+    background-color: #f1f1f1;
+}
+
+div.side_nav {
+    border: 1px solid;
+    float: left;
+    width: 20%;
+}
+
+div.side_nav a {
+    text-decoration: none;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.side_nav a:hover {
+    background-color: #f1f1f1;
+}
+
+div.announcement {
+    border: 1px solid;
+}
+
+div.content {
+    border: 1px solid;
+    margin-top: 0px;
+    margin-left: 20%;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+div.footer { 
+    border: 1px solid black;
+    clear: both;
+    font-size: 75%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: #636563; */
+}
+
+h1, h2, h3 {
+    color: #004DB5;
+    background-color: #ffffff;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 120%;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+a, a:visited, a:hover, a:active {
+     color: black;
+     background-color: #ffffff;
+     text-decoration: underline;
+}
+
+div#alert, div#warning, div#flash_notice {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+div#alert {
+    border: 1px solid red;
+    color: red;
+}
+
+div#warning {
+    border: 1px solid orange;
+    color: orange;
+}
+
+div#flash_notice {
+    border: 1px solid green;
+    color: green;
+}

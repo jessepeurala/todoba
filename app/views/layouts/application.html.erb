@@ -1,25 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Tickets: <%= controller.action_name %></title>
-  <%= javascript_include_tag :defaults %>
-  <%= stylesheet_link_tag 'scaffold' %>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Tickets: <%= controller.action_name %></title>
+    <%= javascript_include_tag :defaults %>
+    <%= stylesheet_link_tag 'reset-min' %>
+    <%= stylesheet_link_tag 'scaffold' %>
+    <%= stylesheet_link_tag 'screen.css' %>
+
+    <script type="text/javascript" src="jquery-1.2.6.pack.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+	    // TODO: validation etc. parent().parent() is only for the demo
+            $(".close").click( function() {
+               $(this).parent().parent().hide("slow");
+            });
+        });
+    </script>
+
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
-
-<div class="nav">
-    <%= link_to 'Projects', projects_path %>
-    <%= link_to 'Sprints', sprints_path %>
-    <%= link_to 'Tickets', tickets_path%>
+<div class="header">
+    <div class="logo">
+    </div>
+    <div class="main_nav">
+        <%= link_to 'Tickets', tickets_path%>
+        <%= link_to 'Projects', projects_path %>
+        <%= link_to 'Sprints', sprints_path %>
+        <a href="#">Mallilinkki</a>    
+        <a href="#">Mallilinkki</a>    
+        <a href="#">Mallilinkki</a>    
+        <a href="#">Mallilinkki</a>    
+        <a href="#">Mallilinkki</a>    
+    </div
 </div>
 
+<div class="side_nav">
+    <a href="#">Mallilinkki</a>
+    <a href="#">Mallilinkki</a>
+    <a href="#">Mallilinkki</a>
+    <a href="#">Mallilinkki</a>
+    <a href="#">Mallilinkki</a>
+</div>
 
-<%= yield  %>
+<div class="content">
+    <p style="color: green"><%= flash[:notice] %></p>
+
+    <%= yield  %>
+</div>
+
+<div class="footer">
+    <p>
+	Yritys OY AB
+    </p>
+</div>
 
 </body>
 </html>
+
+
+
+
+
+

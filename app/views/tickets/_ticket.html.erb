@@ -1,0 +1,9 @@
+<div class="ticket">
+<%=h ticket.title %>
+<%=h ticket.description %>
+<%=h ticket.sprint_id %>
+<%=h ticket.reporter_id %>
+<%= link_to 'Show', ticket %>
+<%= link_to 'Edit', edit_ticket_path(ticket) %>
+<%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %>
+</div>
