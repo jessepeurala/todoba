@@ -1,9 +1,7 @@
-<div class="ticket">
-<%=h ticket.title %>
-<%=h ticket.description %>
-<%=h ticket.sprint_id %>
-<%=h ticket.reporter_id %>
-<%= link_to 'Show', ticket %>
-<%= link_to 'Edit', edit_ticket_path(ticket) %>
-<%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %>
-</div>
+<tr>
+    <td><%= link_to ticket.id, ticket %></td>
+    <td><%=h ticket.description %></td>
+    <td><%=h ticket.reporter_id %></td>
+    <td><%=h ticket.reporter_id %></td>
+    <td><%= link_to '[x]', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

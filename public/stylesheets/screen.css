@@ -4,15 +4,18 @@ body {
 }
 
 table {
-    border: 1px solid black;
     border-spacing: 0px;
     border-collapse: collapse;
     vertical-align: top;
     width: 100%;
 }
 
+th {
+    font-weight: bold;
+}
+
 td {
-    border: 1px solid black;
+    
 }
 
 p {

@@ -1,10 +1,20 @@
-<h1>Ticket cloud</h1>
-
-<div class="tickets">
-<% for ticket in @tickets %>
-    <%= render(:partial => ticket) %>
+<% content_for :side do %>
+    <%= render(:partial => @projects)%>
 <% end %>
-</div>
+
+<h1>Ticket cloud</h1>
+<table class="tickets">
+    <tr>
+        <th>#</th>
+        <th>Description</th>
+        <th>Assigned to</th>
+        <th>Creator</th>
+        <th>Actions</th>
+    </tr>
+    <% for ticket in @tickets %>
+        <%= render(:partial => ticket) %>
+    <% end %>
+    </table>
 
 <% remote_form_for(@ticket) do |f| %>
   <%= f.error_messages %>

@@ -3,7 +3,7 @@ class TicketsController < ApplicationController
   # GET /tickets.xml
   def index
     @tickets = Ticket.find(:all)
-    
+    @projects = Project.find(:all)
     @ticket = Ticket.new
 
     respond_to do |format|
