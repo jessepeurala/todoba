@@ -1,13 +1,21 @@
 body {
     font-family: Tahoma, Verdana, Sans-serif;
     font-size: 90%;
+    padding-bottom: 50px;
 }
 
 table {
-    border-spacing: 0px;
+    border-spacing: 0;
     border-collapse: collapse;
     vertical-align: top;
     width: 100%;
+    vertical-align: top; 
+    
+}
+
+th, td {
+    padding: 1px;
+    vertical-align: top; 
 }
 
 th {
@@ -15,8 +23,14 @@ th {
 }
 
 td {
-    
+
 }
+
+table tr.even {
+    background-color: #f1f1f1;
+}
+
+table tr.odd
 
 p {
     margin-top: 10px;
@@ -112,6 +126,16 @@ a, a:visited, a:hover, a:active {
      color: black;
      background-color: #ffffff;
      text-decoration: underline;
+}
+
+.toolbar { 
+    border: 1px solid black;
+    position: fixed; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: #f1f1f1;
 }
 
 div#alert, div#warning, div#flash_notice {
