@@ -11,12 +11,31 @@
     <%= stylesheet_link_tag 'screen.css' %>
 
     <script type="text/javascript" src="jquery-1.2.6.pack.js"></script>
+    <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
     <script type="text/javascript">
         $(document).ready(function() {
-	    // TODO: validation etc. parent().parent() is only for the demo
-            $(".close").click( function() {
-               $(this).parent().parent().hide("slow");
+
+            $(document).ajaxSend(function(event, request, settings) {
+                if (typeof(AUTH_TOKEN) == "undefined") return;
+                // settings.data is a serialized string like "foo=bar&baz=boink" (or null)
+                settings.data = settings.data || "";
+                settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(AUTH_TOKEN);
             });
+            
+            
+            $("#selection_to_ticket").click( function() {
+
+                selection = window.getSelection();
+
+                $.ajax({
+                  type: "POST",
+                  url: "<%= tickets_path %>",
+                  data: "ticket[description]=" + selection,
+                  success: function(msg){
+                      eval(msg);
+                  }
+                });
+            })
         });
     </script>
 
