@@ -23,6 +23,16 @@
 </head>
 <body>
 
+<div class="toolbar">
+    <!-- For testing -->
+    <form>
+        <input type="text">
+        <%= link_to('Create ticket', 'javascript:void(0);', :id => 'selection_to_ticket');%>
+        <input type="button" value="Add ticket">
+        <%= link_to('Logout', '/logout')%>
+    </form>
+</div>
+
 <div class="header">
     <div class="logo">
     </div>
@@ -49,17 +59,6 @@
 	Yritys OY AB
     </p>
 </div>
-
-<div class="toolbar">
-    <!-- For testing -->
-    <form>
-        <input type="text">
-        <input type="button" value="Add ticket">
-        <input type="button" value="View">
-        <input type="button" value="Format">
-    </form>
-</div>
-
 
 </body>
 </html>

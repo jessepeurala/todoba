@@ -43,9 +43,9 @@ class TicketsController < ApplicationController
   # POST /tickets.xml
   def create
     @ticket = Ticket.new(params[:ticket])
-  
-    #@ticket.reporter = current_user
-      
+
+    @ticket.reporter_id = current_user.id
+            
     respond_to do |format|
       if @ticket.save
         flash[:notice] = 'Ticket was successfully created.'

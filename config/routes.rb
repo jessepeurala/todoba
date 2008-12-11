@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :sprints
 
-  map.resources :projects
+  map.resources :projects, :has_many => :tickets, :shallow => true
 
   map.resources :tickets
   

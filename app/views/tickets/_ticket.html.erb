@@ -1,7 +1,7 @@
 <tr class="<%= cycle("even", "odd") %>">
     <td><%= link_to ticket.id, ticket %></td>
     <td><%=h ticket.description %></td>
-    <td><%=h ticket.reporter_id %></td>
+    <td></td>
     <td><%=h ticket.reporter_id %></td>
     <td><%= link_to '[x]', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
 </tr>

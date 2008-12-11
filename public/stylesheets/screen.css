@@ -38,8 +38,9 @@ p {
 }
 
 div.header {
-    border: 1px solid;
+    border: 0px solid black;
     height: 80px;
+    margin-top: 30px;
 }
 
 div.header div.logo {
@@ -49,8 +50,8 @@ div.header div.logo {
 /* FIX THIS HACK! */
 div.header div.main_nav {
     padding: 10px;
-    margin-right: 20%;
-    float: right;
+    margin-left: 20%;
+    float: left;
 }
 
 div.header div.main_nav a {
@@ -65,7 +66,7 @@ div.header div.main_nav a:hover {
 }
 
 div.side_nav {
-    border: 1px solid;
+    border: 0px solid;
     float: left;
     width: 20%;
 }
@@ -82,11 +83,11 @@ div.side_nav a:hover {
 }
 
 div.announcement {
-    border: 1px solid;
+    border: 0px solid;
 }
 
 div.content {
-    border: 1px solid;
+    border: 0px solid;
     margin-top: 0px;
     margin-left: 20%;
     margin-right: 0px;
@@ -95,7 +96,7 @@ div.content {
 }
 
 div.footer { 
-    border: 1px solid black;
+    border: 0px solid black;
     clear: both;
     font-size: 75%;
     text-align: center;
@@ -128,13 +129,19 @@ a, a:visited, a:hover, a:active {
      text-decoration: underline;
 }
 
+textarea {
+    width: 500px;
+    height: 50px;
+}
+
 .toolbar { 
-    border: 1px solid black;
+    border: 0px solid black;
     position: fixed; 
+    text-align: right;
     left: 0;
     right: 0;
-    bottom: 0;
-    padding: 10px;
+    top: 0;
+    height: 30px;
     background-color: #f1f1f1;
 }
 

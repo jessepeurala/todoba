@@ -2,6 +2,9 @@
     <%= render(:partial => @projects)%>
 <% end %>
 
+
+<div class="flash_notice"></div>
+
 <h1>Ticket cloud</h1>
 <table class="tickets">
     <tr>
@@ -19,7 +22,7 @@
 <% remote_form_for(@ticket) do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :rows => nil, :cols => nil %>
   </p>
   <p>
     <%= f.submit "Create" %>

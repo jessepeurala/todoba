@@ -1,3 +1,3 @@
-$("#new_ticket").before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$(".flash_notice").text('<%= escape_javascript(flash.delete(:notice)) %>');
 $(".tickets").append("<%= escape_javascript(render(:partial => @ticket)) %>");
 $("#new_ticket")[0].reset();
