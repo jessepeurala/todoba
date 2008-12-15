@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081211151735) do
+ActiveRecord::Schema.define(:version => 20081215155926) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20081211151735) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "project_id"
+  end
+
+  create_table "tracks", :force => true do |t|
+    t.datetime "begins"
+    t.datetime "ends"
+    t.integer  "breaks"
+    t.string   "location"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
