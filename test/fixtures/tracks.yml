@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  begins: 2008-12-15 17:59:26
+  ends: 2008-12-15 17:59:26
+  breaks: 1
+  location: MyString
+  desc: MyText
+
+two:
+  begins: 2008-12-15 17:59:26
+  ends: 2008-12-15 17:59:26
+  breaks: 1
+  location: MyString
+  desc: MyText

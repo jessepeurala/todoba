@@ -1,0 +1,28 @@
+<h1>Listing tracks</h1>
+
+<table>
+  <tr>
+    <th>Begins</th>
+    <th>Ends</th>
+    <th>Breaks</th>
+    <th>Location</th>
+    <th>Desc</th>
+  </tr>
+
+<% for track in @tracks %>
+  <tr>
+    <td><%=h track.begins %></td>
+    <td><%=h track.ends %></td>
+    <td><%=h track.breaks %></td>
+    <td><%=h track.location %></td>
+    <td><%=h track.desc %></td>
+    <td><%= link_to 'Show', track %></td>
+    <td><%= link_to 'Edit', edit_track_path(track) %></td>
+    <td><%= link_to 'Destroy', track, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New track', new_track_path %>

@@ -1,0 +1,28 @@
+<p>
+  <b>Begins:</b>
+  <%=h @track.begins %>
+</p>
+
+<p>
+  <b>Ends:</b>
+  <%=h @track.ends %>
+</p>
+
+<p>
+  <b>Breaks:</b>
+  <%=h @track.breaks %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @track.location %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%=h @track.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>
