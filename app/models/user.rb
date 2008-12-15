@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   belongs_to :manager, :class_name => "Employee", :foreign_key => "manager_id"
   has_many :employees, :foreign_key => "manager_id"
 
+  has_many :tracks
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
     u = find_by_login(login) # need to get the salt
