@@ -3,6 +3,7 @@ class TracksController < ApplicationController
   # GET /tracks.xml
   def index
     @tracks = Track.find(:all)
+    @track = Track.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,6 +47,7 @@ class TracksController < ApplicationController
       if @track.save
         flash[:notice] = 'Track was successfully created.'
         format.html { redirect_to(@track) }
+        format.js
         format.xml  { render :xml => @track, :status => :created, :location => @track }
       else
         format.html { render :action => "new" }

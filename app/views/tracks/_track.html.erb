@@ -1,0 +1,10 @@
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%=h track.begins %></td>
+    <td><%=h track.ends %></td>
+    <td><%=h track.breaks %></td>
+    <td><%=h track.location %></td>
+    <td><%=h track.desc %></td>
+    <td><%= link_to 'Show', track %></td>
+    <td><%= link_to 'Edit', edit_track_path(track) %></td>
+    <td><%= link_to 'Destroy', track, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
