@@ -9,6 +9,7 @@
     <th>Breaks</th>
     <th>Location</th>
     <th>Desc</th>
+    <th>Project</th>
   </tr>
 
 <% for track in @tracks %>
@@ -18,6 +19,7 @@
     <td><%=h track.breaks %></td>
     <td><%=h track.location %></td>
     <td><%=h track.desc %></td>
+    <td><%=h track.project.name %></td>
     <td><%= link_to 'Show', track %></td>
     <td><%= link_to 'Edit', edit_track_path(track) %></td>
     <td><%= link_to 'Destroy', track, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -34,6 +36,8 @@
     <%= f.label :begins %><br />
     <%= f.datetime_select :begins %>
   </p>
+  <%= select_tag 'project_id', options_for_select(Project.all.collect{ |u| [u.name, u.id] }) %>
+
   <p>
     <%= f.label :ends %><br />
     <%= f.datetime_select :ends %>
