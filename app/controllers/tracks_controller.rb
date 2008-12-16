@@ -41,6 +41,8 @@ class TracksController < ApplicationController
   # POST /tracks.xml
   def create
     @track = Track.new(params[:track])
+    @track.user = current_user
+    @track.project = Project.find params[:project_id]
 
     respond_to do |format|
       if @track.save
